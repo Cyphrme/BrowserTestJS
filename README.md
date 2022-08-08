@@ -9,6 +9,15 @@ Run unit tests in the browser.
 
 In this document, we will be referring to your project as `my_awesome_project`.
 
+Import BrowserTestJS as a submodule to the project.
+
+The following example will demonstrate cloning into the root of the project:
+
+``` sh
+git submodule add git@github.com:Cyphrme/BrowserTestJS.git
+```
+Which will result in the following project structure:
+
 ```dir
 my_awesome_project /
  ├─ My_File.html
@@ -19,6 +28,15 @@ my_awesome_project /
 ```
 
 The file `test_unit.js` and directory `browsertestjs` are for browsertestjs.
+
+## To update the submodule
+When changes are made to BrowserTestJS, a project can update the changes by
+running the following command from the directory where the project's .gitmodules
+lives:
+
+```sh
+git submodule update --remote
+```
 
 ## To run tests
 You must have Go installed on your local machine.
