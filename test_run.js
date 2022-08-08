@@ -50,10 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
  * @returns {void}
  **/
 function setGUI(tbjs) {
-	if (tbjs.TestGUIOptions !== null && tbjs.TestGUIOptions !== undefined &&
-		typeof tbjs.TestGUIOptions === "object" && Object.keys(tbjs.TestGUIOptions).length > 0) {
-		// Perform checks for what options are provided and what is default.
+	if (tbjs.TestGUIOptions !== null && tbjs.TestGUIOptions !== undefined && typeof tbjs.TestGUIOptions === "object") {
 		let keys = Object.keys(tbjs.TestGUIOptions);
+		if (keys.length <= 0) {
+			setStyleSheet(DefaultPageStylesheet);
+			return;
+		}
+
+		// Perform checks for what options are provided and what is default.
 
 		// Set custom header and stylesheet if provided
 		if (keys.includes("header")) {
