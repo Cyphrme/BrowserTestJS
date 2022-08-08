@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (tbjs === null || tbjs == undefined || typeof tbjs !== "object" || Object.keys(tbjs).length <= 0) {
 		console.error("TestBrowserJS: The TestBrowserJS object is not properly defined, please see README.", tbjs);
 	} else {
+		if (tbjs.TestGUIOptions === null || tbjs.TestGUIOptions === undefined || typeof tbjs.TestGUIOptions !== "object") {
+			tbjs.TestGUIOptions = {};
+		}
 		setGUI(tbjs);
 
 		if (Array.isArray(tbjs.TestsToRun) && tbjs.TestsToRun.length > 0) {
@@ -50,9 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
  * @returns {void}
  **/
 function setGUI(tbjs) {
-	if (tbjs.TestGUIOptions === null || tbjs.TestGUIOptions === undefined || typeof tbjs.TestGUIOptions !== "object") {
-		tbjs.TestGUIOptions = {};
-	}
 	let keys = Object.keys(tbjs.TestGUIOptions);
 	if (keys.length <= 0) {
 		setStyleSheet(DefaultPageStylesheet);
