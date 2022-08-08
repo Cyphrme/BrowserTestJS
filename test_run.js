@@ -22,6 +22,10 @@ const DefaultPageStylesheet = {
  * See README for how to structure your directory, and test_unit.js file.
  **/
 document.addEventListener('DOMContentLoaded', () => {
+	// Module will break and not get to the onload for the page if `test_unit.js`
+	// does not exist. Hide the no module div and show test results.
+	document.getElementById('NoModuleFound').hidden = true;
+	document.getElementById('testsResultsMeta').hidden = false;
 	let tbjs = Unit.TestBrowserJS;
 	if (tbjs === null || tbjs == undefined || typeof tbjs !== "object" || Object.keys(tbjs).length <= 0) {
 		console.error("TestBrowserJS: The TestBrowserJS object is not properly defined, please see README.", tbjs);

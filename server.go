@@ -18,8 +18,7 @@ func serveFiles(w http.ResponseWriter, r *http.Request) {
 	if filePath == "" {
 		// On empty path display home/index (`test.html`)
 		filePath = "test.html"
-	} else if filePath == "test_run.js" || filePath == "test.js" ||
-		filePath == "browsertestjs.png" || filePath == "cyphrme_bootstrap.min.css" { // TODO do not hardcode cyphrme_bootstrap.min.css
+	} else if filePath == "test_run.js" || filePath == "test.js" || filePath == "browsertestjs.png" || filePath == "favicon.ico" {
 		// Do nothing, serve filepath unmodified.
 	} else {
 		filePath = "../" + filePath

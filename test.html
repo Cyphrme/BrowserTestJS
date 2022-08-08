@@ -10,7 +10,7 @@
 		<meta name="theme-color" content="#ffffff">
 
 		<title>Coze</title>
-		<link rel="stylesheet" id="bootstrapCSS" href="cyphrme_bootstrap.min.css">
+		<link rel="stylesheet" id="bootstrapCSS">
 
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -34,8 +34,15 @@
 
 			<a href="/"><img class="my-2" id="MainImage" src="browsertestjs.png" alt="Browser Test JS"></a>
 
+			<div id="NoModuleFound">
+			<h1>🙁 No `test_unit.js` file was found. 🙁</h1>
+			<h3>See README for how to use BrowserTestJS in a project.</h3>
 
-			<div id="testsResultsMeta">
+			
+			</div>
+
+
+			<div id="testsResultsMeta" hidden>
 				<h1 id="testsRunning" class="text-primary">⏱️ Tests Running ⏱️</h1>
 				<h1 hidden id="testsPassed" class="text-success">🥳 All tests passed 🥳</h1>
 				<h1 hidden id="testsFailed" class="text-danger">😞 Tests failed 😞</h1>
