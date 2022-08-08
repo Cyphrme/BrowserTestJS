@@ -4,7 +4,7 @@ export {
 	TestBrowserJS
 };
 
-// Minimum requrements for what contents of `test_unit.js` must have.
+// Minimum requirements for what contents of `test_unit.js` must have.
 
 /**
  * @typedef {import('./test.js').TestsToRun} TestsToRun
