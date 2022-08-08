@@ -1,5 +1,5 @@
 # BrowserTestJS 
-![BrowserTestJS](./browsertestjs/browsertestjs.png)
+![BrowserTestJS](./browsertestjs.png)
 
 Run unit tests in the browser.
 
