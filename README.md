@@ -29,6 +29,15 @@ my_awesome_project /
 
 The file `test_unit.js` and directory `browsertestjs` are for browsertestjs.
 
+## To update the submodule
+When changes are made to BrowserTestJS, a project can update the changes by
+running the following command from the directory where the project's .gitmodules
+lives:
+
+```sh
+git submodule update --remote
+```
+
 ## To run tests
 You must have Go installed on your local machine.
 
