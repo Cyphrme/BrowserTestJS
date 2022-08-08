@@ -50,38 +50,39 @@ document.addEventListener('DOMContentLoaded', () => {
  * @returns {void}
  **/
 function setGUI(tbjs) {
-	if (tbjs.TestGUIOptions !== null && tbjs.TestGUIOptions !== undefined && typeof tbjs.TestGUIOptions === "object") {
-		let keys = Object.keys(tbjs.TestGUIOptions);
-		if (keys.length <= 0) {
-			setStyleSheet(DefaultPageStylesheet);
-			return;
-		}
+	if (tbjs.TestGUIOptions === null || tbjs.TestGUIOptions === undefined || typeof tbjs.TestGUIOptions !== "object") {
+		tbjs.TestGUIOptions = {};
+	}
+	let keys = Object.keys(tbjs.TestGUIOptions);
+	if (keys.length <= 0) {
+		setStyleSheet(DefaultPageStylesheet);
+		return;
+	}
 
-		// Perform checks for what options are provided and what is default.
+	// Perform checks for what options are provided and what is default.
 
-		// Set custom header and stylesheet if provided
-		if (keys.includes("header")) {
-			document.getElementById('CustomHeader').innerHTML = tbjs.TestGUIOptions.header;
-		} else if (keys.includes("stylesheet")) {
-			// Set stylesheet if custom provided, and custom header is not.
-			setStyleSheet(tbjs.TestGUIOptions.stylesheet);
-		} else {
-			// If no custom header or stylesheet is given, use defaults.
-			setStyleSheet(DefaultPageStylesheet);
-		}
+	// Set custom header and stylesheet if provided
+	if (keys.includes("header")) {
+		document.getElementById('CustomHeader').innerHTML = tbjs.TestGUIOptions.header;
+	} else if (keys.includes("stylesheet")) {
+		// Set stylesheet if custom provided, and custom header is not.
+		setStyleSheet(tbjs.TestGUIOptions.stylesheet);
+	} else {
+		// If no custom header or stylesheet is given, use defaults.
+		setStyleSheet(DefaultPageStylesheet);
+	}
 
-		// Set custom footer if provided
-		if (keys.includes("footer")) {
-			document.getElementById('CustomFooter').innerHTML = tbjs.TestGUIOptions.footer;
-		}
-		// Set custom main image if given.
-		if (keys.includes("main_image")) {
-			document.getElementById('MainImage').src = tbjs.TestGUIOptions.main_image;
-		}
-		// Set custom custom HTML testing area in body if given.
-		if (keys.includes("html_test_area")) {
-			document.getElementById('htmlTestArea').innerHTML = tbjs.TestGUIOptions.html_test_area;
-		}
+	// Set custom footer if provided
+	if (keys.includes("footer")) {
+		document.getElementById('CustomFooter').innerHTML = tbjs.TestGUIOptions.footer;
+	}
+	// Set custom main image if given.
+	if (keys.includes("main_image")) {
+		document.getElementById('MainImage').src = tbjs.TestGUIOptions.main_image;
+	}
+	// Set custom custom HTML testing area in body if given.
+	if (keys.includes("html_test_area")) {
+		document.getElementById('htmlTestArea').innerHTML = tbjs.TestGUIOptions.html_test_area;
 	}
 }
 
