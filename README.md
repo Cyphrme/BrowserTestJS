@@ -78,6 +78,7 @@ The `TestGUIOptions` is an optional parameter and is not required for
 TestBrowserJS. `TestGUIOptions` includes stylesheet options for your project.
 
 See `test_unit.js.example` for an example of a unit test file.
+
 See `test_unit.js.template` for a starting template for building a unit test
 file.
 
