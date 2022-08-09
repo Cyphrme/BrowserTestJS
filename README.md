@@ -38,6 +38,9 @@ lives:
 git submodule update --remote
 ```
 
+## Having issues with submodules?
+[See if this resolves the issue](https://stackoverflow.com/a/35778105/15147681)
+
 ## To run tests
 You must have Go installed on your local machine.
 
