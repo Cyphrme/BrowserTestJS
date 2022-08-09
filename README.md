@@ -77,69 +77,9 @@ There are three parts to each test:
 The `TestGUIOptions` is an optional parameter and is not required for
 TestBrowserJS. `TestGUIOptions` includes stylesheet options for your project.
 
-
-``` Javascript
-"use strict";
-
-import * as MAP from '/my_awesome_project/file_3.js';
-
-export {
-	TestBrowserJS
-};
-
-/**
- * @typedef {import('./test.js').Test} Test
- * @typedef {import('./test.js').TestsToRun} TestsToRun
- * @typedef {import('./test.js').TestGUIOptions} TestGUIOptions
- * @typedef {import('./test.js').TestBrowserJS} TestBrowserJS
- */
-
-/**@type {Test} */
-let t_Correct = {
-	"name": "Correct",
-	"func": test_thingIsCorrect,
-	"golden": true
-};
-
-// Tests "file_3.js.IsThingCorrect()".
-async function test_thingIsCorrect() {
-	let thing = {"color":"blue","shape":"round"};
-	if (MAP.IsThingCorrect(thing)) {
-		return true;
-	}
-	return false;
-};
-
-/**
- * TestsToRun must be declared at the bottom of the file, as the variables
- * cannot be accessed before initialization.
- *
- * @type {TestsToRun}
- **/
-let TestsToRun = [
-t_Correct
-];
-
-/** @type {TestGUIOptions} **/
-let TestGUIOptions = {
-	footer: `<h1><a href="github.com/my_awesome_project">
-	Link to the source code for My Awesome Project
-	</a></h1>`,
-	stylesheet: {
-		href: "file_2.css"
-	},
-	main_image: "logo.png"
-
-};
-
-/** @type {TestBrowserJS} **/
-let TestBrowserJS = {
-	TestsToRun,
-	TestGUIOptions
-};
-
-```
-
+See `test_unit.js.example` for an example of a unit test file.
+See `test_unit.js.template` for a starting template for building a unit test
+file.
 
 [Live demo for an example of a project implementing BrowserTestJS](https://cyphrme.github.io/ExampleBrowserTestJS/)
 
@@ -149,3 +89,11 @@ Example from `test_unit.js` in [Coze js](https://github.com/Cyphrme/Cozejs).
 ## Logo license
 "you are free to use your logo for promotional purposes"
 https://support.freelogodesign.org/hc/en-us/categories/360003253451-Copyrights
+
+
+----------------------------------------------------------------------
+# Attribution, Trademark notice, and License
+BrowserTestJS and ExampleBrowserTestJS is released under The 3-Clause BSD License. 
+
+"Cyphr.me" is a trademark of Cypherpunk, LLC. The Cyphr.me logo is all rights
+reserved Cypherpunk, LLC and may not be used without permission.
