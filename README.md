@@ -23,6 +23,17 @@ my_awesome_project /
  ├─ My_File.html
  ├─ My_File.js
  ├─ ...
+ └─ browsertestjs /
+```
+
+Next, a `test_unit.js` file must be created above the `browsertestjs` directory,
+which will result in the following:
+
+```dir
+my_awesome_project /
+ ├─ My_File.html
+ ├─ My_File.js
+ ├─ ...
  ├─ test_unit.js
  └─ browsertestjs /
 ```
@@ -49,8 +60,10 @@ cd $my_awesome_project/browsertestjs
 go run server.go
 ```
 
-Then, go to `localhost:8082`.  Voila! You now have unit tests for your projects directly in the browser.
+Then, go to `localhost:8082`.  Voila! You now have unit tests for your projects
+directly in the browser.
 
+# Examples
 ### Example `test_unit.js`
 
 There are three parts to each test:
@@ -63,9 +76,6 @@ There are three parts to each test:
 
 The `TestGUIOptions` is an optional parameter and is not required for
 TestBrowserJS. `TestGUIOptions` includes stylesheet options for your project.
-
-
-Example from `test_unit.js` in [Coze js](https://github.com/Cyphrme/Cozejs).
 
 
 ``` Javascript
@@ -130,6 +140,12 @@ let TestBrowserJS = {
 
 ```
 
-### Logo license
+
+[Live demo for an example of a project implementing BrowserTestJS](https://cyphrme.github.io/ExampleBrowserTestJS/)
+
+Example from `test_unit.js` in [Coze js](https://github.com/Cyphrme/Cozejs).
+
+
+## Logo license
 "you are free to use your logo for promotional purposes"
 https://support.freelogodesign.org/hc/en-us/categories/360003253451-Copyrights
