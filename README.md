@@ -3,7 +3,6 @@
 
 Run unit tests in the browser.
 
-
 ## [Demo](https://cyphrme.github.io/BrowserTestJSExample/browsertestjs/test.html)
 
 (Example demo repository)[https://github.com/Cyphrme/BrowserTestJSExample].
