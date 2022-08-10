@@ -3,9 +3,15 @@
 
 Run unit tests in the browser.
 
-## How to use BrowserTestJS
+## [Demo](https://cyphrme.github.io/ExampleBrowserTestJS/)
 
-### How to structure within your repo
+## Example from `test_unit.js` in [Coze js](https://github.com/Cyphrme/Cozejs).
+
+#
+
+# How to use BrowserTestJS
+
+### How to structure within a repo
 
 In this document, we will be referring to your project as `my_awesome_project`.
 
@@ -23,10 +29,10 @@ my_awesome_project /
  ├─ My_File.html
  ├─ My_File.js
  ├─ ...
- └─ browsertestjs /
+ └─ BrowserTestJS /
 ```
 
-Next, a `test_unit.js` file must be created above the `browsertestjs` directory,
+Next, a `test_unit.js` file must be created above the `BrowserTestJS` directory,
 which will result in the following:
 
 ```dir
@@ -35,10 +41,10 @@ my_awesome_project /
  ├─ My_File.js
  ├─ ...
  ├─ test_unit.js
- └─ browsertestjs /
+ └─ BrowserTestJS /
 ```
 
-The file `test_unit.js` and directory `browsertestjs` are for browsertestjs.
+The file `test_unit.js` and directory `BrowserTestJS` are for browsertestjs.
 
 ## To update the submodule
 When changes are made to BrowserTestJS, a project can update the changes by
@@ -56,15 +62,14 @@ git submodule update --remote
 You must have Go installed on your local machine.
 
 ```sh
-cd $my_awesome_project/browsertestjs
+cd $my_awesome_project/BrowserTestJS
 go run server.go
 ```
 
 Then, go to `localhost:8082`.  Voila! You now have unit tests for your projects
 directly in the browser.
 
-# Examples
-### Example `test_unit.js`
+### Building `test_unit.js`
 
 There are three parts to each test:
 1. ) Writing the "schema" of the test, which includes:
@@ -81,10 +86,6 @@ See `test_unit.js.example` for an example of a unit test file.
 
 See `test_unit.js.template` for a starting template for building a unit test
 file.
-
-[Live demo for an example of a project implementing BrowserTestJS](https://cyphrme.github.io/ExampleBrowserTestJS/)
-
-Example from `test_unit.js` in [Coze js](https://github.com/Cyphrme/Cozejs).
 
 
 ## Logo license
