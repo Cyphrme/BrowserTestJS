@@ -5,7 +5,7 @@ Run unit tests in the browser.
 
 ## [Demo](https://cyphrme.github.io/BrowserTestJSExample/browsertestjs/test.html)
 
-(Example demo repository)[https://github.com/Cyphrme/BrowserTestJSExample].
+[Example demo repository](https://github.com/Cyphrme/BrowserTestJSExample).
 
 Example from `test_unit.js` in [Coze js](https://github.com/Cyphrme/Cozejs).
 
