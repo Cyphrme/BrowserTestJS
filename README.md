@@ -3,9 +3,12 @@
 
 Run unit tests in the browser.
 
+
 ## [Demo](https://cyphrme.github.io/BrowserTestJSExample/browsertestjs/test.html)
 
-See also the example from `test_unit.js` in [Coze js](https://github.com/Cyphrme/Cozejs).
+(Example demo repository)[https://github.com/Cyphrme/BrowserTestJSExample].
+
+Example from `test_unit.js` in [Coze js](https://github.com/Cyphrme/Cozejs).
 
 
 # How to use BrowserTestJS
