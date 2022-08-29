@@ -3,35 +3,35 @@
 
 Run unit tests in the browser.
 
-## [Demo](https://cyphrme.github.io/ExampleBrowserTestJS/)
+## [Demo](https://cyphrme.github.io/BrowserTestJSExample/browsertestjs/test.html)
 
-#
+[Example demo repository](https://github.com/Cyphrme/BrowserTestJSExample).
+
+Example from `test_unit.js` in [Coze js](https://github.com/Cyphrme/Cozejs).
+
 
 # How to use BrowserTestJS
 
 ### How to structure within a repo
-
-In this document, we will be referring to your project as `my_awesome_project`.
 
 Import BrowserTestJS as a submodule to the project.
 
 The following example will demonstrate cloning into the root of the project:
 
 ``` sh
-git submodule add git@github.com:Cyphrme/BrowserTestJS.git
+git submodule add git@github.com:Cyphrme/BrowserTestJS.git browsertestjs
 ```
-Which will result in the following project structure:
+Which will add `browsertestjs` to the following project:
 
 ```dir
 my_awesome_project /
  ├─ My_File.html
  ├─ My_File.js
  ├─ ...
- └─ BrowserTestJS /
+ └─ browsertestjs /
 ```
 
-Next, a `test_unit.js` file must be created above the `BrowserTestJS` directory,
-which will result in the following:
+Write your tests in `test_unit.js` (above the `browsertestjs` directory).  You may use `test_unit.js.example` as a starting template.
 
 ```dir
 my_awesome_project /
@@ -39,10 +39,10 @@ my_awesome_project /
  ├─ My_File.js
  ├─ ...
  ├─ test_unit.js
- └─ BrowserTestJS /
+ └─ browsertestjs /
 ```
 
-The file `test_unit.js` and directory `BrowserTestJS` are for browsertestjs.
+The file `test_unit.js` and directory `browsertestjs` are for BrowserTestJS.
 
 ## To update the submodule
 When changes are made to BrowserTestJS, a project can update the changes by
@@ -56,11 +56,11 @@ git submodule update --remote
 ## Having issues with submodules?
 [See if this resolves the issue](https://stackoverflow.com/a/35778105/15147681)
 
-## To run tests
+## Run tests locally with a local HTTP server
 You must have Go installed on your local machine.
 
 ```sh
-cd $my_awesome_project/BrowserTestJS
+cd $my_awesome_project/browsertestjs
 go run server.go
 ```
 
