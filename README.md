@@ -5,9 +5,11 @@ Run unit tests in the browser.
 
 ## [Demo](https://cyphrme.github.io/BrowserTestJSExample/browsertestjs/test.html)
 
+[Real use in a project](https://cyphrme.github.io/Cozejs/test/browsertestjs/test.html)  (from [Cozejs](https://github.com/Cyphrme/Cozejs)).
+
 [Example demo repository](https://github.com/Cyphrme/BrowserTestJSExample).
 
-Example from `test_unit.js` in [Coze js](https://github.com/Cyphrme/Cozejs).
+
 
 
 # How to use BrowserTestJS
@@ -84,8 +86,6 @@ See `test_unit.js.example` for an example of a unit test file.
 
 See `test_unit.js.template` for a starting template for building a unit test
 file.
-
-## Example from `test_unit.js` in [Coze js](https://github.com/Cyphrme/Cozejs).
 
 ## Logo license
 "you are free to use your logo for promotional purposes"
