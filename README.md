@@ -10,8 +10,6 @@ Run unit tests in the browser.
 [Example demo repository](https://github.com/Cyphrme/BrowserTestJSExample).
 
 
-
-
 # How to use BrowserTestJS
 
 ### How to structure within a repo
@@ -26,7 +24,7 @@ git submodule add git@github.com:Cyphrme/BrowserTestJS.git browsertestjs
 Which will add `browsertestjs` to the following project:
 
 ```dir
-my_awesome_project /
+my_project /
  ├─ My_File.html
  ├─ My_File.js
  ├─ ...
@@ -36,7 +34,7 @@ my_awesome_project /
 Write your tests in `test_unit.js` (above the `browsertestjs` directory).  You may use `test_unit.js.example` as a starting template.
 
 ```dir
-my_awesome_project /
+my_project /
  ├─ My_File.html
  ├─ My_File.js
  ├─ ...
@@ -62,7 +60,7 @@ git submodule update --remote
 You must have Go installed on your local machine.
 
 ```sh
-cd $my_awesome_project/browsertestjs
+cd $my_project/browsertestjs
 go run server.go
 ```
 
@@ -82,10 +80,6 @@ There are three parts to each test:
 The `TestGUIOptions` is an optional parameter and is not required for
 TestBrowserJS. `TestGUIOptions` includes stylesheet options for your project.
 
-See `test_unit.js.example` for an example of a unit test file.
-
-See `test_unit.js.template` for a starting template for building a unit test
-file.
 
 ## Logo license
 "you are free to use your logo for promotional purposes"
