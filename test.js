@@ -190,7 +190,7 @@ function appendResult(obj) {
 const DefaultPageStylesheet = {
 	href: "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css",
 	rel: "stylesheet",
-	// integrity: "sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx",
+	integrity: "sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx",
 	crossorigin: "anonymous"
 };
 
@@ -223,10 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Sets the Browser Test JS GUI. If the needed attribute for the page is not
- * provided, the default will be used.
+ * Sets the Browser Test JS GUI. Sets values if provided, otherwise sets defaults.  
  *
- * @param   {TestBrowserJS}  tbjs   Object. Holds interface betwe TestBrowserJS and package.
+ * @param   {TestBrowserJS}  tbjs   Object. Options for TestBrowserJS.
  * @returns {void}
  **/
 function setGUI(tbjs) {
