@@ -3,7 +3,7 @@
 
 Run unit tests in the browser.
 
-## [Demo](https://cyphrme.github.io/BrowserTestJS/browsertestexample/browsertestjs/test.html)
+## [Demo](https://cyphrme.github.io/BrowserTestJS/browsertestexample/browsertestjs/browsertest.html)
 
 [Real use in a project](https://cyphrme.github.io/Cozejs/test/browsertestjs/test.html)  (from [Cozejs](https://github.com/Cyphrme/Cozejs)).
 
