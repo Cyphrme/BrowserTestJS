@@ -3,11 +3,10 @@
 
 Run unit tests in the browser.
 
-## [Demo](https://cyphrme.github.io/BrowserTestJSExample/browsertestjs/test.html)
+## [Demo](https://cyphrme.github.io/BrowserTestJS/browsertestexample/browsertestjs/test.html)
 
 [Real use in a project](https://cyphrme.github.io/Cozejs/test/browsertestjs/test.html)  (from [Cozejs](https://github.com/Cyphrme/Cozejs)).
 
-[Example demo repository](https://github.com/Cyphrme/BrowserTestJSExample).
 
 
 # How to use BrowserTestJS
