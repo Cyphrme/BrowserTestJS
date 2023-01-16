@@ -191,7 +191,7 @@ const DefaultPageStylesheet = {
 	href: "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css",
 	rel: "stylesheet",
 	integrity: "sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx",
-	crossorigin: "anonymous"
+	crossOrigin: "anonymous"
 };
 
 /**
@@ -273,10 +273,10 @@ function setStyleSheet(ss) {
 	let stylesheet = document.getElementById('bootstrapCSS');
 	stylesheet.href = ss.href;
 	let keys = Object.keys(ss);
-	if (keys.includes("crossorigin")) {
-		stylesheet.crossorigin = ss.crossorigin;
+	if (keys.includes("crossOrigin")) {
+		stylesheet.crossOrigin = ss.crossOrigin;
 	} else {
-		stylesheet.crossorigin = DefaultPageStylesheet.crossorigin;
+		stylesheet.crossOrigin = DefaultPageStylesheet.crossOrigin;
 	}
 	if (keys.includes("integrity")) {
 		stylesheet.integrity = ss.integrity;
@@ -286,4 +286,6 @@ function setStyleSheet(ss) {
 	} else {
 		stylesheet.rel = DefaultPageStylesheet.rel;
 	}
+
+	console.log(stylesheet);
 }
