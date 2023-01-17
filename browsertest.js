@@ -106,6 +106,38 @@ let testFailCount = 0;
 const jsResultTemplate = document.getElementById('js_test_results');
 
 /**
+ * Calls tests to be ran, after the DOM has been loaded.
+ * See README for structuring your directory and `test_unit.js` file.
+ **/
+document.addEventListener('DOMContentLoaded', () => {
+	// If imported, don't run onload as determined by existence of #NoModuleFound.
+	let noMod = document.getElementById('NoModuleFound');
+	if (noMod == null) {
+		return;
+	}
+
+	document.getElementById('NoModuleFound').hidden = true;
+	document.getElementById('testsResultsMeta').hidden = false;
+	let tbjs = Unit.TestBrowserJS;
+	if (tbjs === null || tbjs == undefined || typeof tbjs !== "object" || Object.keys(tbjs).length <= 0) {
+		console.error("TestBrowserJS: The TestBrowserJS object is not properly defined, please see README.", tbjs);
+	} else {
+		if (tbjs.TestGUIOptions === null || tbjs.TestGUIOptions === undefined || typeof tbjs.TestGUIOptions !== "object") {
+			tbjs.TestGUIOptions = {};
+		}
+		setGUI(tbjs);
+
+		if (Array.isArray(tbjs.TestsToRun) && tbjs.TestsToRun.length > 0) {
+			Run(tbjs.TestsToRun);
+			return;
+		}
+	}
+
+	document.getElementById('testsResultsMeta').innerHTML = "";
+	document.getElementById('noTestsToRun').hidden = false;
+});
+
+/**
  * Runs all of the tests in the 'TestsToRun' array.
  * @param   {Tests} tests
  * @returns {void}
@@ -127,6 +159,10 @@ async function Run(tests) {
 	}
 	stats();
 };
+
+
+
+
 
 /**
  * stats displays statistics about the tests that are being run, out to the
@@ -193,34 +229,6 @@ const DefaultPageStylesheet = {
 	integrity: "sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx",
 	crossOrigin: "anonymous"
 };
-
-/**
- * Calls tests to be ran, after the DOM has been loaded.
- * See README for how to structure your directory, and test_unit.js file.
- **/
-document.addEventListener('DOMContentLoaded', () => {
-	// Module will break and not get to the onload for the page if `test_unit.js`
-	// does not exist. Hide the no module div and show test results.
-	document.getElementById('NoModuleFound').hidden = true;
-	document.getElementById('testsResultsMeta').hidden = false;
-	let tbjs = Unit.TestBrowserJS;
-	if (tbjs === null || tbjs == undefined || typeof tbjs !== "object" || Object.keys(tbjs).length <= 0) {
-		console.error("TestBrowserJS: The TestBrowserJS object is not properly defined, please see README.", tbjs);
-	} else {
-		if (tbjs.TestGUIOptions === null || tbjs.TestGUIOptions === undefined || typeof tbjs.TestGUIOptions !== "object") {
-			tbjs.TestGUIOptions = {};
-		}
-		setGUI(tbjs);
-
-		if (Array.isArray(tbjs.TestsToRun) && tbjs.TestsToRun.length > 0) {
-			Run(tbjs.TestsToRun);
-			return;
-		}
-	}
-
-	document.getElementById('testsResultsMeta').innerHTML = "";
-	document.getElementById('noTestsToRun').hidden = false;
-});
 
 /**
  * Sets the Browser Test JS GUI. Sets values if provided, otherwise sets defaults.  
