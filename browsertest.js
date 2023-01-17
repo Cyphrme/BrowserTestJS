@@ -287,5 +287,5 @@ function setStyleSheet(ss) {
 		stylesheet.rel = DefaultPageStylesheet.rel;
 	}
 
-	console.log(stylesheet);
+	// console.log(stylesheet); // debugging
 }
