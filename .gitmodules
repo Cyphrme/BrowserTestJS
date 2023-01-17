@@ -1,3 +1,6 @@
 [submodule "example/browsertestjs"]
 	path = example/browsertestjs
 	url = git@github.com:Cyphrme/BrowserTestJS.git
+[submodule "example/browsertest"]
+	path = example/browsertest
+	url = git@github.com:Cyphrme/BrowserTestJS.git
