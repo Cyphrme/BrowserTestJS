@@ -3,7 +3,7 @@
 
 Run unit tests in the browser.
 
-## [Demo](https://cyphrme.github.io/BrowserTestJS/browsertestexample/browsertestjs/browsertest.html)
+## [Demo](https://cyphrme.github.io/BrowserTestJS/example/browsertestjs/browsertest.html)
 
 [Real use in a project](https://cyphrme.github.io/Cozejs/test/browsertestjs/test.html)  (from [Cozejs](https://github.com/Cyphrme/Cozejs)).
 
@@ -15,22 +15,20 @@ Run unit tests in the browser.
 
 Import BrowserTestJS as a submodule to the project.
 
-The following example will demonstrate cloning into the root of the project:
-
 ``` sh
-git submodule add git@github.com:Cyphrme/BrowserTestJS.git browsertestjs
+git submodule add git@github.com:Cyphrme/BrowserTestJS.git browsertest
 ```
-Which will add `browsertestjs` to the following project:
+Which will add `browsertest` to the following project:
 
 ```dir
 my_project /
  ├─ My_File.html
  ├─ My_File.js
  ├─ ...
- └─ browsertestjs /
+ └─ browsertest /
 ```
 
-Write your tests in `test_unit.js` (above the `browsertestjs` directory).  You may use `test_unit.js.example` as a starting template.
+Write your tests in `test_unit.js` (above the `browsertest` directory).  You may use `test_unit.js.example` as a starting template.
 
 ```dir
 my_project /
@@ -38,15 +36,14 @@ my_project /
  ├─ My_File.js
  ├─ ...
  ├─ test_unit.js
- └─ browsertestjs /
+ └─ browsertest /
 ```
 
-The file `test_unit.js` and directory `browsertestjs` are for BrowserTestJS.
+The file `test_unit.js` and directory `browsertest` are for BrowserTestJS.
 
-## To update the submodule
-When changes are made to BrowserTestJS, a project can update the changes by
-running the following command from the directory where the project's .gitmodules
-lives:
+## Update the submodule
+To update BrowserTestJS to the latest version, a project can update by running
+the following command from the directory where `.gitmodules` exists:
 
 ```sh
 git submodule update --remote
@@ -59,7 +56,7 @@ git submodule update --remote
 You must have Go installed on your local machine.
 
 ```sh
-cd $my_project/browsertestjs
+cd $my_project/browsertest
 go run server.go
 ```
 
