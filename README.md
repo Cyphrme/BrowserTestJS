@@ -3,15 +3,12 @@
 
 Run unit tests in the browser.
 
-## [Demo](https://cyphrme.github.io/BrowserTestJS/example/browsertestjs/browsertest.html)
+## [Demo](https://cyphrme.github.io/BrowserTestJS/example/browsertest/browsertest.html)
 
 [Real use in a project](https://cyphrme.github.io/Cozejs/test/browsertestjs/test.html)  (from [Cozejs](https://github.com/Cyphrme/Cozejs)).
 
 
-
 # How to use BrowserTestJS
-
-### How to structure within a repo
 
 Import BrowserTestJS as a submodule to the project.
 
@@ -21,60 +18,55 @@ git submodule add git@github.com:Cyphrme/BrowserTestJS.git browsertest
 Which will add `browsertest` to the following project:
 
 ```dir
-my_project /
+my_project/
  ├─ My_File.html
  ├─ My_File.js
  ├─ ...
- └─ browsertest /
+ └─ browsertest/
 ```
 
-Write your tests in `test_unit.js` (above the `browsertest` directory).  You may use `test_unit.js.example` as a starting template.
+Write tests in `test_unit.js` (above the `browsertest` directory).
+`example/test_unit.js` may be used as a starter template.
 
 ```dir
-my_project /
+my_project/
  ├─ My_File.html
  ├─ My_File.js
  ├─ ...
  ├─ test_unit.js
- └─ browsertest /
+ └─ browsertest/
 ```
 
-The file `test_unit.js` and directory `browsertest` are for BrowserTestJS.
 
-## Update the submodule
-To update BrowserTestJS to the latest version, a project can update by running
-the following command from the directory where `.gitmodules` exists:
+## Updating BrowserTestJS
+A project can update by running the following command from the directory where
+`.gitmodules` exists:
 
 ```sh
 git submodule update --remote
 ```
 
-## Having issues with submodules?
-[See if this resolves the issue](https://stackoverflow.com/a/35778105/15147681)
-
 ## Run tests locally with a local HTTP server
-You must have Go installed on your local machine.
+Go must be installed.
 
 ```sh
 cd $my_project/browsertest
 go run server.go
 ```
 
-Then, go to `localhost:8082`.  Voila! You now have unit tests for your projects
-directly in the browser.
+Then go to `localhost:8082`.  
 
-### Building `test_unit.js`
+# Parameters for `test_unit.js`
 
 There are three parts to each test:
-1. ) Writing the "schema" of the test, which includes:
+1. Writing the "schema" of the test, which includes:
     - The Name of the test, which is the name used to differ tests and shows in browser.
     - The Function of the test, which is the test function testing something in your source code.
     - The Golden results of the test, which is the expected behavior/results from running your test function.
-2. ) Writing the test function that tests your source code.
-3. ) Invoking the test by placing the test schema in the `TestsToRun` variable.
-
-The `TestGUIOptions` is an optional parameter and is not required for
-TestBrowserJS. `TestGUIOptions` includes stylesheet options for your project.
+2. Writing the test function that tests your source code.
+3. Invoking the test by placing the test schema in the `TestsToRun` variable.
+4. The `TestGUIOptions` is an optional parameter and is not required for
+   TestBrowserJS. `TestGUIOptions` includes stylesheet options for your project.
 
 
 ## Logo license
