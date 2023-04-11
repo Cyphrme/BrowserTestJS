@@ -16,7 +16,7 @@ func serveFiles(w http.ResponseWriter, r *http.Request) {
 
 	var filePath = r.URL.Path[1:] //remove slash
 	if filePath == "" {
-		// On empty path display home/index (`test.html`)
+		// On empty path display home/index (`browsertest.html`)
 		filePath = "browsertest.html"
 	} else if filePath == "browsertest.js" || filePath == "browsertest.html" || filePath == "browsertestjs.png" || filePath == "favicon.ico" {
 		// Do nothing, serve filepath unmodified.
