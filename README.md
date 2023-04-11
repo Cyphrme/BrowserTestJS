@@ -5,7 +5,7 @@ Run unit tests in the browser.
 
 [Demo](https://cyphrme.github.io/BrowserTestJS/example/browsertest/browsertest.html)
 
-[Real use in a project](https://cyphrme.github.io/Cozejs/verifier/browsertest/browsertest.html)  (from [Cozejs](https://github.com/Cyphrme/Cozejs)).
+[Real use in a project](https://cyphrme.github.io/Coze_js/verifier/browsertest/browsertest.html)  (from [Coze JS](https://github.com/Cyphrme/Coze_js)).
 
 
 # How to use BrowserTestJS
