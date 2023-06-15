@@ -16,10 +16,10 @@ import * as Unit from '../test_unit.js';
  * - func:   Test function to execute.
  * - golden: Correct return value for the test.
  *
- * @typedef  {Object}      Test
- * @property {String}      name
+ * @typedef  {object}      Test
+ * @property {string}      name
  * @property {Function}    func
- * @property {String}      golden
+ * @property {string}      golden
  *
  * -----------------------------------------------------------------------------
  *
@@ -41,11 +41,11 @@ import * as Unit from '../test_unit.js';
  * - integrity:   The digest/checksum for the given source/stylesheet.
  * - crossorigin: Sets the crossorigin for requests to the resource.
  *
- * @typedef  {Object}  Stylesheet
- * @property {String}  href
- * @property {String}  [rel]
- * @property {String}  [integrity]
- * @property {String}  [crossorigin]
+ * @typedef  {object}  Stylesheet
+ * @property {string}  href
+ * @property {string}  [rel]
+ * @property {string}  [integrity]
+ * @property {string}  [crossorigin]
  *
  * -----------------------------------------------------------------------------
  *
@@ -71,7 +71,7 @@ import * as Unit from '../test_unit.js';
  * - main_image:      Custom main image.
  * - html_test_area:  Custom HTML for testing and page customization.
  *
- * @typedef  {Object}             TestGUIOptions
+ * @typedef  {object}             TestGUIOptions
  * @property {Stylesheet}         [header]
  * @property {Stylesheet}         [stylesheet]
  * @property {String=Element}     [footer]
@@ -90,7 +90,7 @@ import * as Unit from '../test_unit.js';
  * - TestsToRun:  Holds the tests to be ran for the given application/package.
  * - TestOptions: Holds the options to be used for the GUI.
  *
- * @typedef  {Object}           TestBrowserJS
+ * @typedef  {object}           TestBrowserJS
  * @property {TestsToRun}       TestsToRun
  * @property {TestGUIOptions}   TestGUIOptions
  *
@@ -187,7 +187,7 @@ async function stats() {
 /**
  * appendResults appends the results to the div on the page.
  *
- * @param {Object} obj            The object that holds the name of the test,
+ * @param {object} obj            The object that holds the name of the test,
  *                                function, expected result, and actual results.
  * @returns {void}
  */
