@@ -3,16 +3,14 @@
 
 Run unit tests in the browser.
 
-[Demo](https://cyphrme.github.io/BrowserTestJS/example/browsertest/browsertest.html)
-
+[Demo](https://cyphrme.github.io/BrowserTestJSExample/browsertest/browsertest.html)
 [Real use in a project](https://cyphrme.github.io/Coze_js/verifier/browsertest/browsertest.html)  (from [Coze JS](https://github.com/Cyphrme/Coze_js)).
 
-
 # How to use BrowserTestJS
-
 Import BrowserTestJS as a submodule to the project.
 
 ``` sh
+git clone git@github.com:Cyphrme/BrowserTestJS.git browsertest
 git submodule add git@github.com:Cyphrme/BrowserTestJS.git browsertest
 ```
 
@@ -38,21 +36,13 @@ my_project/
  └─ browsertest/
 ```
 
-
 ## Updating BrowserTestJS
 A project can update by running the following command from the directory where
 `.gitmodules` exists:
 
 ```sh
-git submodule update --remote
+git submodule update --init --recursive --remote
 ```
-
-If the git submodule is causing issues, use `--force`:
-
-```
-git submodule add --force git@github.com:Cyphrme/BrowserTestJS.git verifier/browsertest
-```
-
 
 ## Run tests locally with a local HTTP server
 Go must be installed.
@@ -62,7 +52,7 @@ cd $my_project/browsertest
 go run server.go
 ```
 
-Then go to `localhost:8082`.  
+Then in your browser go to `localhost:8082`.  
 
 #### Why use a Go server for testing?
 HTTPS is vital since some Javascript, especially cryptographic functions, are
